@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html,body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(215, 215, 228);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 10px 0;
+}
+
+.navbar {
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header .logo {
+    color: rgb(121, 121, 207);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 400;
+    border-radius: 6px;
+    padding: 5px 7px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    background-color: rgb(121, 121, 207);
+    color: #fff;
+}
+
+.navbar {
+    overflow: hidden;
+}
+
+.dropdown {
+    overflow: hidden;
+}
+
+.dropdown .btn {
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    color: black;
+    background-color: inherit;
+    font-family: inherit;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu a{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgb(121, 121, 207);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.main {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 7rem 0;
+}
+
+.introduction {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2;
+}
+
+.introduction .hello span {
+    color: rgb(164, 162, 162);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.introduction .my-name span{
+    text-transform: capitalize;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.introduction .my-name .strong,
+.introduction .my-name .strong {
+    font-weight: 700;
+}
+
+.introduction .expanatory p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.hire-me a {
+    width: 100%;
+    border: 1px solid black;
+    padding: 13px 25px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    font-size: 1.1em;
+    line-height: 5;
+}
+
+.hire-me a:nth-of-type(1) {
+    background-color: rgb(121, 121, 207);
+    color: white;
+    border: none;
+    margin: 0 1rem 0 0;
+    transition: background-color 0.2s ease-in-out,border 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.hire-me a:nth-of-type(2) {
+    border: 2px solid rgb(121, 121, 207);
+    color: rgb(121, 121, 207);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.hire-me a:nth-of-type(1):hover,
+.hire-me a:nth-of-type(1):focus {
+    background-color: rgb(215, 215, 228);
+    border: 2px solid rgb(121, 121, 207);
+    color: rgb(121, 121, 207);
+}
+
+.hire-me a:nth-of-type(2):hover,
+.hire-me a:nth-of-type(2):hover {
+    background-color: rgb(121, 121, 207);
+    color: white;
+}
+
+.header h1::selection,
+.header .navbar a::selection {
+    background-color: rgb(215, 215, 228);
+}
+
+.main .hello span::selection,
+.main .my-name span::selection,
+.main .expanatory p::selection, 
+.main .hire-me a::selection {
+    background-color: rgb(121, 121, 207);
+}
+
+.image {
+    width: 300px;
+    height: 350px;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.image #zoom-in img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out, background-color 0.2s ease-in-out, filter 0.4s ease-in-out;
+}
+
+.image:hover img {
+    transform: scale(1.1);
+    filter: brightness(75%);
+}
+
+@media (max-width:900px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: rgb(215, 215, 228);
+    }
+    .introduction {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 2;
+        margin: 0 0 0 2rem;
+        overflow: hidden;
+    }
+    .image {
+        width: 250px;
+        height: 300px;
+        border-radius: 50%;
+        margin: 0 0 0 2rem;
+    }
+    .navbar {
+        margin: 0 2rem 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: rgb(215, 215, 228);
+    }
+    .header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white;
+        padding: 10px 0;
+    }
+    .header .logo {
+        color: rgb(121, 121, 207);
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        font-weight: 700;
+        font-size: 14px;
+    }
+    .navbar a {
+        font-size: 1rem;
+    }
+    .navbar {
+        width: 45%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 4rem 0 0;
+    }
+    .introduction .hello span {
+        color: rgb(164, 162, 162);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+    .introduction .my-name span{
+        text-transform: capitalize;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 180px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .header {
+        width: 300%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white;
+        padding: 10px 0;
+    }
+    .header .logo {
+        color: rgb(121, 121, 207);
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        font-weight: 700;
+        font-size: 11px;
+    }
+    .navbar a {
+        font-size: 0.6rem;
+    }
+    .navbar {
+        width: 45%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 4rem 0 0;
+    }
+    .main {
+        width: 200%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 7rem 0;
+    }
+    
+    .introduction {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 2;
+    }
+    
+    .introduction .hello span {
+        color: rgb(164, 162, 162);
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+    
+    .introduction .my-name span{
+        text-transform: capitalize;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        line-height: 1.3;
+    }
+
+    .introduction .my-name .strong,
+    .introduction .my-name .strong {
+        font-weight: 700;
+    }
+    
+    .introduction .expanatory p {
+        font-size: 0.5rem;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    .hire-me a {
+        width: 100%;
+        border: 1px solid black;
+        padding: 5px 15px;
+        border-radius: 10px;
+        text-transform: capitalize;
+        font-size: 0.7em;
+        line-height: 5;
+    }
+    
+    .hire-me a:nth-of-type(1) {
+        background-color: rgb(121, 121, 207);
+        color: white;
+        border: none;
+        margin: 0 1rem 0 0;
+        transition: background-color 0.2s ease-in-out,border 0.2s ease-in-out, color 0.2s ease-in-out;
+    }
+    
+    .hire-me a:nth-of-type(2) {
+        border: 2px solid rgb(121, 121, 207);
+        color: rgb(121, 121, 207);
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    }
+    .image {
+        width: 150px;
+        height: 100px;
+        border-radius: 50%;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .main {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 7rem 0;
+    }
+    
+}
